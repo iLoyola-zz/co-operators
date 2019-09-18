@@ -1,0 +1,18 @@
+{
+   "AssessmentName": "Self-Evaluation",
+   "Question1": {
+      "QuestionCategory": "Productivity *",
+      "QuestionID": "5894",
+      "QuestionText": "I consistently delivery my work to agreed timeframes and specifications. I rarely, if ever,miss a deadline or delay a project",
+      "QuestionSequence":"1",
+      "HasAnswered":"N"
+  },
+   "Question2": {
+      "QuestionCategory": "Leadership",
+      "QuestionID": "5898",
+      "QuestionText": "I consistently lead my projects to completion",
+      "QuestionSequence": "2",
+      "HasAnswered": "Y",
+      "Response": "4"
+  }
+}

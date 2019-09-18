@@ -1,0 +1,34 @@
+.#{$prefix}main {
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100%;
+}
+
+.#{$prefix}container {
+  background-color: white;
+}
+
+.#{$prefix}container-row {
+
+}
+
+.#{$prefix}container-row-column {
+  padding: 1rem;
+}
+
+.#{$prefix}container-row-column-heading {
+
+}
+
+.#{$prefix}container-row-column-text {
+
+}
+
+.#{$prefix}col-previous-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.#{$prefix}col-next-button {
+
+}
