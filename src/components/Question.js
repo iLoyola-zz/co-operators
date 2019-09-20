@@ -1,10 +1,20 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export const Question = (props) => (
-  <Row>
-    {/* {props.questions.map((question) => <Col>{props.QuestionCategory}</Col>)} */}
-  </Row>
+const Question = (props) => (
+  <Col className="il-coop-container-row-column">
+    <p className="il-coop-container-row-column-text">
+      {props.questionText}
+    </p>
+  </Col>
 )
+
+const mapStateToProps = (state) => {
+  return {
+    questionText: state.questionText
+  }
+}
+
+export default connect(mapStateToProps)(Question)
