@@ -18,5 +18,6 @@ button {
 }
 
 button:disabled {
+	background-color: black;
 	cursor: default;
 }
