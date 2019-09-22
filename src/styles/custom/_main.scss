@@ -6,6 +6,21 @@
 
 .#{$prefix}container {
   background-color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 768px;
+}
+
+.#{$prefix}container-1 {
+  padding-top: 2rem;
+}
+
+.#{$prefix}container-2 {
+
+}
+
+.#{$prefix}container-3 {
+  padding-bottom: 2rem;
 }
 
 .#{$prefix}container-row {
