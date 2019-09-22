@@ -6,8 +6,14 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 const Questions = (props) => {
-    console.log(props);
     const { questionIndex, questions } = props
+    const initialRating = () => {
+      if (questions[questionIndex - 1].Response === undefined) {
+        return 0
+      } else {
+        return parseInt(questions[questionIndex - 1].Response)
+      }
+    }
     return (
       <Container>
         <Row>
@@ -27,11 +33,12 @@ const Questions = (props) => {
         <Row className="il-coop-container-row">
           <Col className="il-coop-container-row-column">
             <Rating
-              onClick={(value) => this.handleRating(value)}
+              onClick={(value) => props.handleRating(value)}
               start={0}
               stop={10}
               step={1}
-              fractions={2} />
+              fractions={2}
+              initialRating={initialRating()} />
           </Col>
         </Row>
       </Container>

@@ -29,8 +29,10 @@ class SurveyPage extends React.Component {
       questions
     })
   }
-  handleRating = (props) => {
-
+  handleRating = (setRating) => {
+    let newState = Object.assign({}, this.state)
+    newState.questions[this.state.questionIndex - 1].Response = setRating.toString()
+    this.setState(newState)
   }
   handlePreviousQuestion = () => {
     this.setState((prevState) => ({
@@ -43,8 +45,6 @@ class SurveyPage extends React.Component {
     }))
   }
   render() {
-    console.log(this.state.questionIndex > this.state.questions.length);
-
     return (
       <section className="il-coop-section">
         <Container className="il-coop-container">
@@ -54,7 +54,7 @@ class SurveyPage extends React.Component {
             </Col>
           </Row>
         </Container>
-        {this.state.questions.length ? (<Questions questionIndex={this.state.questionIndex} questions={this.state.questions} />) : ('Loading question...')}
+        {this.state.questions.length ? (<Questions questionIndex={this.state.questionIndex} questions={this.state.questions} handleRating={this.handleRating} />) : ('Loading question...')}
         <Container>
           <Row className="il-coop-container-row">
             <Col xs={3} md={2} className="il-coop-container-row-column il-coop-col-previous-button">
