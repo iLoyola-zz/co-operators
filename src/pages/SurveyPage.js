@@ -43,6 +43,8 @@ class SurveyPage extends React.Component {
     }))
   }
   render() {
+    console.log(this.state.questionIndex > this.state.questions.length);
+
     return (
       <section className="il-coop-section">
         <Container className="il-coop-container">
@@ -56,13 +58,13 @@ class SurveyPage extends React.Component {
         <Container>
           <Row className="il-coop-container-row">
             <Col xs={3} md={2} className="il-coop-container-row-column il-coop-col-previous-button">
-              <Button onClick={this.handlePreviousQuestion} disabled={this.state.questionIndex < 1} variant="primary" className="il-coop-button" size="lg" block>Previous</Button>
+              <Button onClick={this.handlePreviousQuestion} disabled={this.state.questionIndex === 1} variant="primary" className="il-coop-button" size="lg" block>Previous</Button>
             </Col>
             <Col xs={12} md={8} className="il-coop-container-row-column">
               <ProgressBar now={(100 / this.state.questions.length) * this.state.questionIndex} />
             </Col>
             <Col xs={3} md={2} className="il-coop-container-row-column il-coop-col-next-button">
-              <Button onClick={this.handleNextQuestion} disabled={this.state.questionIndex > this.state.questions.length} variant="primary" className="il-coop-button" size="lg" block>Next</Button>
+              <Button onClick={this.handleNextQuestion} disabled={this.state.questionIndex === this.state.questions.length} variant="primary" className="il-coop-button" size="lg" block>Next</Button>
             </Col>
           </Row>
         </Container>
