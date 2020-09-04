@@ -27,7 +27,7 @@
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "^4.2.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "16.8.6",
     "react-addons-update": "^15.6.2",
     "react-bootstrap": "^1.0.0-beta.9",
